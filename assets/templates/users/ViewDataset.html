@@ -1,0 +1,49 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+
+<section id="mu-featured-slider">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><br/><br/><br/><br/><br/><br/>
+                    <h3>Machine Learning Algorithm for Stroke Disease Classification</h3>
+                      <table border="2px" class="table table-hover table-dark">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">Contrast</th>
+                        <th scope="col">Dissimilarity</th>
+                        <th scope="col">Homegeneity</th>
+                        <th scope="col">Energy</th>
+                        <th scope="col">Correlation</th>
+                        <th scope="col">ASM</th>
+                        <th scope="col">Class</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr scope="row" style="color: BLUE; background-color:#FFFCBB">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.contrast}}</td>
+                        <td>{{i.dissimilarity}}</td>
+                        <td>{{i.homogeneity}}</td>
+                        <td>{{i.energy}}</td>
+                        <td>{{i.correlation}}</td>
+                        <td>{{i.ass}}</td>
+                        <td>{{i.lableclass}}</td>
+
+                    </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+					<div class="mu-featured-area">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{%endblock%}

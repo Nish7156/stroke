@@ -1,0 +1,39 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+
+<section id="mu-featured-slider">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><br/><br/><br/><br/><br/><br/>
+                    <h3>Machine Learning Classification Algorithm Results</h3>
+                      <table border="2px" class="table table-hover table-dark">
+                    <thead>
+                    <tr class="table-danger">
+                        <th scope="col">S.No</th>
+                        <th scope="col">Algorithm Name</th>
+                        <th scope="col">Accuracy</th>
+                        <th scope="col">Precision</th>
+                        <th scope="col">Recall</th>
+                        <th scope="col">F1-Measure</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for key,value in myDict.items %}
+                    <tr scope="row" style="color: BLUE; background-color:#FFFCBB">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{key}}</td>
+                        {% for i in value%}
+                        <td>{{i}}</td>
+                        {%endfor%}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+					<div class="mu-featured-area">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{%endblock%}
