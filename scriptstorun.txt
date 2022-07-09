@@ -1,2 +1,4 @@
 docker build -t strokedisease .
 docker run -d stroekdisease
+
+docker run -d -p 8000:8000 bonthusaireddy/strokedisease:1
