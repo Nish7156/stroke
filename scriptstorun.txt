@@ -1,0 +1,2 @@
+docker build -t strokedisease .
+docker run -d stroekdisease
